@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RouteUI selectedfrontopacity="0.8"
+		 selectedfrontcolor="#C0C0C0"
+	     bgnormal="#424242"
+	     bgactive="#424242"
+         gainmeterscript="mixer_gain_meter.xml">
+  <HBox>
+    <EventBox id="frame"
+        bgnormal="#424242"
+        bgactive="#FFFFFF">
+      <EventBox id="pad"
+      borderwidth="1">
+        <VBox>
+          <VBox height="59">
+            <HBox box.expand="true">
+              <HBox id="panners_home"
+                        box.expand="true"
+                        width="50"
+                        height="41"/>
+            </HBox>
+          </VBox>
+          <HBox id="level_meter_home"/>
+          <Vbox>
+            <HBox id="gain_meter_home"/>
+            <VBox spacing="1" width="57">
+              <HBox  spacing="1">
+                <iconbutton id="rec_enable_button"
+                            width="28"
+                            height="20"
+                            normalicon="mixer_record"
+                            activeicon="mixer_record_active"
+                            implicitactiveicon="mixer_record_safe"
+                            tooltip="Record Enable"/>
+                <iconbutton id="monitor_input_button"
+                            width="28"
+                            height="20"
+                            normalicon="mixer_monitor_input"
+                            activeicon="mixer_monitor_input_active"
+                            tooltip="Input Monitoring"/>
+              </HBox>
+              <HBox spacing="1">
+                <iconbutton id="mute_button"
+                            width="28"
+                            height="20"
+                            normalicon="mixer_mute"
+                            activeicon="mixer_mute_active"
+                            implicitactiveicon="mixer_mute_implicit"
+                            tooltip="Mute"/>
+                <iconbutton id="solo_button"
+                            width="28"
+                            height="20"
+                            normalicon="mixer_solo"
+                            activeicon="mixer_solo_active"
+                            implicitactiveicon="mixer_solo_safe"
+                            tooltip="Solo"/>
+              </HBox>
+              <EventBox id="name_home"
+                        bgactive="#ffffff">
+                <HBox>
+                  <Label id="name_label"
+                       width="57"
+                       height="28"
+                         text="Track 1"
+                         horzalignment="center"
+                         fgnormal="#FFFFFF"
+                         fgactive="#000000"
+                         winfont ="Arial 10"
+                       macfont ="Helvetica 10"
+                         box.fill="true"
+                         box.expand="true"/>
+                  <VBox id="name_entry_eventbox"
+                            width="57"
+                            height="28"
+                            visible="false">
+                    <FocusEntry id="name_entry"
+                                hasframe="false"
+                                fgnormal="#ffffff"
+                                winfont ="Arial 10"
+                                macfont ="Helvetica 10"
+                                textcolornormal="#ffffff"
+                                textcoloractive="#ffffff"
+                                textcolorselected="#ffffff"
+
+                                noshowall="true"
+                                visible="false"
+                                box.expand="true"/>
+                  </VBox>
+                </HBox>
+              </EventBox>
+            </VBox>
+          </Vbox>
+          <HBox height="1"/>
+        </VBox>
+      </EventBox>
+    </EventBox>
+    <EventBox bgnormal="#000000"
+              bgactive="#000000"
+              width="1"/>
+  </HBox>
+  <Button id="show_sends_button" ui.orphan="true"/>
+  <Button id="monitor_disk_button" ui.orphan="true"/>
+  <Button id="comment_button" ui.orphan="true"/>
+  <Button id="midi_input_enable_button" ui.orphan="true"/>
+  <Button id="group_button" text="Grp" ui.orphan="true"/>
+  <HBox id="invert_button_box" ui.orphan="true"/>
+  <button id="master_mute_button" ui.orphan="true"/>
+  <VBox id="track_buttons_home" ui.orphan="true"/>
+  <EventBox id="rec_enable_indicator_on"
+            ui.orphan="true"/>
+  <EventBox id="rec_enable_indicator_off"
+            ui.orphan="true"/>
+</RouteUI>

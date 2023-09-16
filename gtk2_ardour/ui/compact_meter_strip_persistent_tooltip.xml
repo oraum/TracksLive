@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window title=""
+        ui.dialog.modal="false"
+        ui.decor.menu="false"
+        ui.decor.resize="false"
+        ui.opacity="0.8">
+ <EventBox bgnormal="#ffffff">
+     <VBox>
+         <HBox height="4"
+               ui.os.windows="false"/>
+         <Label id="tooltip_text"
+                winfont ="Arial Bold 22"
+                macfont ="Helvetica Bold 22"
+                fgnormal="#000000"
+                horzpadding="4"/>
+     </VBox>
+ </EventBox>
+</Window>

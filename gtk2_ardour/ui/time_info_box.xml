@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TimeInfoBox>
+  <HBox id="selection_start_home"/>
+  <HBox height="5"/>
+  <HBox id="selection_end_home"/>
+  <HBox height="4"/>
+  <HBox id="selection_length_home"/>
+  <HBox id="punch_start_home"
+        ui.orphan="true"/>
+  <HBox id="punch_end_home"
+        ui.orphan="true"/>
+</TimeInfoBox>

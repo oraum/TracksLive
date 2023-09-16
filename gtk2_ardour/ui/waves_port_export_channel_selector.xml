@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HBox UI.NEEDINIT="true"
+      spacing="5">
+  <style name="generic_control"
+         winfont ="Arial Bold 10"
+         macfont ="Helvetica Bold 10"
+         fgnormal="#6F6F6F"
+         bgnormal="#6C6C6C"
+         fgactive="#6F6F6F"
+         bgactive="#454545"/>
+  <style name="generic_button"
+         style="generic_control"
+         bgnormal="#CACAC5"
+         fgactive="#EDECE8"
+         bgactive="#6D6E72"
+         width="80"
+         height="22"/>
+  <style name="generic_dropdown"
+         style="generic_button"
+         fgnormal="#C1C1C1"
+         textcolornormal="#C1C1C1"
+         basenormal="#6C6C6C"
+         bgnormal="#6C6C6C"/>
+  <style name="generic_dropdown_menu"
+         style="generic_dropdown"/>
+  <VBox spacing="5"
+        _visible="false"
+        _noshowall="true">
+    <HBox spacing="5"
+        visible="false"
+        noshowall="true">
+      <Label style="generic_control"
+             text="Channels:"/>
+      <HBox box.fill="true" box.expand="true">
+        <Entry id="channels_entry"
+               style="generic_dropdown"
+               hasframe="false"
+               horzalignment="start"
+               width="32"
+               height="22"
+               box.fill="true"
+               box.expand="true"/>
+        <VBox>
+          <iconbutton id="channels_inc_button"
+                      width="12"
+                      height="11"
+                      normalicon="spin_up_12x11"
+                      activeicon="spin_up_12x11_active"
+                      inactiveicon="spin_up_12x11_inactive"/>
+          <iconbutton id="channels_dec_button"
+                      width="12"
+                      height="11"
+                      normalicon="spin_down_12x11"
+                      activeicon="spin_down_12x11_active"
+                      inactiveicon="spin_down_12x11_inactive"/>
+        </VBox>
+      </HBox>
+    </HBox>
+    <IconButton id="split_button"
+                text="Split mono files"
+                height="20"
+                imagewidth="20"
+                imageheight="20"
+                normalicon="waves_darker_check_box"
+                activeicon="waves_darker_check_box_active"
+                toggleable="true">
+      <HBox>
+        <VBox width="20"/>
+        <Label style="generic_control"/>
+      </HBox>
+    </IconButton>
+  </VBox>
+  <VBox box.fill="true"
+        box.expand="true"
+        visible="false"
+        noshowall="true">
+    <ScrolledWindow id="channel_scroller"
+                    box.fill="true"
+                    box.expand="true"/>
+    <VBox height="10"/>
+  </VBox>
+</HBox>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialog title="Add Marker"
+        resizeable="false"
+        maxtrackscount="256">
+ <style name="generic_control"
+        winfont ="Arial Bold 10"
+        macfont ="Helvetica Bold 10"
+        fgnormal="#6D6E72"
+        bgnormal="#6C6C6C"
+        fgactive="#BFBFBF"
+        bgactive="#454545"
+        fghover="#CCCCCC"
+        bghover="#898989"/>
+  <style name="generic_button"
+        winfont ="Arial Bold 10"
+        macfont ="Helvetica Bold 10"
+        fgnormal="#6D6E72"
+        textcolornormal="#6D6E72"
+        bgnormal="#CACAC5"
+        basenormal="#CACAC5"
+        fgactive="#EDECE8"
+        bgactive="#6D6E72"
+        borderwidth="0 0 0 0"
+        bordercolor="#6D6E72"/>
+ <style name="generic_dropdown"
+        style="generic_control"
+        bgnormal="#6C6C6C"
+        basenormal="#6C6C6C"
+        fgnormal="#C1C1C1"
+        textcolornormal="#C1C1C1"/>
+ <style name="generic_dropdown_menu"
+        style="generic_dropdown"/>
+  <EventBox width="350"
+            height="20"
+            bgnormal="#EDECE8"/>
+  <EventBox bgnormal="#EDECE8">
+      <VBox>
+        <VBox width="5"/>
+        <HBox>
+            <VBox width="15"/>
+            <Entry  style="generic_dropdown"
+                    id="marker_name_entry"
+                    text="1"
+                    hasframe="false"
+                    justify="center"
+                    width="320"
+                    height="22"/>
+        </HBox>
+        <VBox height="15"/>
+        <HBox>
+            <VBox width="135"/>
+            <Button style="generic_button"
+                    id="cancel_button"
+                    text="Cancel"
+                    winfont="Arial Bold 10"
+                    macfont="Helvetica Bold 10"
+                    width="90"
+                    height="22"/>
+            <VBox width="20"/>
+            <Button style="generic_button"
+                    id="ok_button"
+                    text="Ok"
+                    winfont="Arial Bold 10"
+                    macfont="Helvetica Bold 10"
+                    width="90"
+                    height="22"/>
+        </HBox>
+        <VBox height="15"/>
+      </VBox>
+  </EventBox>
+</Dialog>

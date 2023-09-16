@@ -1,0 +1,7 @@
+Download waf (http://code.google.com/p/waf/)
+autowaf.py is present in the tools directory of the Ardour source code.
+
+From within the waf source tree, run:
+
+./waf-light -v --make-waf --tools=misc,doxygen,/path/to/autowaf.py --prelude=''
+cp ./waf /path/to/ardour/3.0/waf

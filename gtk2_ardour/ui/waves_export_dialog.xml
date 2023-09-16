@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialog title="Tracks Live">
+  <style name="generic_control"
+         winfont ="Arial Bold 10"
+         macfont ="Helvetica Bold 10"
+         fgnormal="#6F6F6F"
+         bgnormal="#6C6C6C"
+         fgactive="#BFBFBF"
+         bgactive="#454545"/>
+  <style name="generic_button"
+         style="generic_control"
+         bgnormal="#CACAC5"
+         fgactive="#EDECE8"
+         bgactive="#6D6E72"
+         width="80"
+         height="22"/>
+  <style name="tab_button"
+         style="generic_button"
+         bgnormal="#CACAC5"
+         fgactive="#6F6F6F"
+         bgactive="#EDECE8"
+         width="80"
+         height="22"/>
+
+  <EventBox bgnormal="#EDECE8"
+            box.pack="end">
+    <VBox>
+      <VBox id="settings_home">
+        <EventBox bgnormal="#CACAC5">
+          <HBox spacing="1">
+            <Button id="file_format_selector_button"
+                    style="tab_button"
+                    text="File Format"/>
+            <Button id="timespan_selector_button"
+                    style="tab_button"
+                    text="Time Span"/>
+            <!--<Button id="channel_selector_button"
+                    style="tab_button"
+                    text="Channels"/>-->
+          </HBox>
+        </EventBox>
+        <VBox borderwidth="10">
+          <EventBox id="selectors_home"
+                    bgnormal="#EDECE8"
+                    width="642"
+                    height="210">
+            <VBox id="file_format_selector">
+              <HBox id="preset_selector_home" ui.orphan="true"/>
+              <HBox id="file_notebook_home"/>
+            </VBox>
+            <VBox id="timespan_selector_home"/>
+            <VBox id="channel_selector_home"/>
+          </EventBox>
+          <VBox spacing="10"
+                 id="warning_widget">
+            <HBox box.expand="true">
+              <Label id="error_label"
+                     style="generic_control"
+                     usemarkup="true"
+                     box.pack="start"
+                     fgnormal="#FF0000"/>
+            </HBox>
+            <HBox box.expand="true">
+              <Label id="warn_label"
+                     style="generic_control"
+                     usemarkup="true"
+                     box.pack="start"
+                     fgnormal="#E2974B"/>
+            </HBox>
+            <VBox height="22">
+              <HBox id="list_files_widget"
+                    spacing="10"
+                    box.expand="true">
+                <Label style="generic_control"
+                       text="Some already existing files will be overwritten."
+                       box.pack="start"
+                       fgnormal="#E2974B"/>
+                <Button id="list_files_button"
+                        style="generic_button"
+                        box.pack="end"
+                        text="List Files"/>
+              </HBox>
+            </VBox>
+          </VBox>
+        </VBox>
+      </VBox>
+      <HBox id="export_progress_widget" box.padding="10">
+        <ProgressBar id="export_progress_bar"
+                     width="642"
+                     height="22"
+                     bgnormal="#6B6B6B"
+                     bgselected="#20B2AA"
+                     box.padding="10"
+                     box.fill="true"
+                     box.expand="true"/>
+      </HBox>
+      <HBox>
+        <Button id="export_button"
+                style="generic_button"
+                box.pack="end"
+                text="Export"
+                box.padding="10"/>
+        <Button id="cancel_button"
+                style="generic_button"
+                box.pack="end"
+                text="Cancel"
+                box.padding="10"/>
+        <Button id="stop_export_button"
+                style="generic_button"
+                box.pack="end"
+                visible="false"
+                noshowall="true"
+                text="Stop Export"
+                box.padding="10"/>
+      </HBox>
+      <HBox height="10"/>
+    </VBox>
+  </EventBox>
+</Dialog>

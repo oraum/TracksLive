@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CompactMeterStrip bgnormal="#353535"
+                   meterwidth="10"
+                   thinmeterwidth="4"
+                   tooltip_winfont="Arial Bold 20"
+                   tooltip_macfont="Helvetica Bold 20">
+  <VBox width="20">
+      <Label id="track_number_label"
+             horzalignment="center"
+             justify="center"
+             fgnormal="#ffffff"
+             fgactive="#F93667"
+             winfont="Arial 10"
+             macfont="Helvetica 10"
+             height="15"/>
+      <EventBox id="highlight_eventbox"
+                bgnormal="#303030"
+                bgactive="#424242">
+               <HBox height="51">
+                    <EventBox id="level_meter_home"
+                              box.expand="true"
+                              bgnormal="#303030"
+                              bgactive="#424242"/>
+               </HBox>
+      </EventBox>
+  </VBox>
+</CompactMeterStrip>

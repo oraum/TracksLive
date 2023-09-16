@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialog resizeable="false">
+  <style name="generic_control"
+         winfont="Arial Bold 14"
+         macfont="Helvetica Bold 14"
+         fgnormal="#6D6E72"/>
+  <style name="generic_button"
+         style="generic_control"
+         visible="false"
+         noshowall="true"
+         winfont="Arial Bold 10"
+         macfont="Helvetica Bold 10"
+         fgnormal="#6D6E72"
+         bgnormal="#CACAC5"
+         fgactive="#EDECE8"
+         bgactive="#6D6E72"
+         fghover="#CCCCCC"
+         bghover="#898989"
+         fgdisabled="#959595"
+         bordercolor="#6D6E72"
+         borderwidth="0 0 0 0"
+         width="80"
+         height="22"/>         
+  <EventBox bgnormal="#EDECE8">
+    <VBox borderwidth="10">
+      <HBox height="10">
+        <Label style ="generic_control"
+               id="message_label"/>
+      </HBox>
+      <Label style="generic_control"
+             text="Device sample rate doesn&apos;t match\nproject sample rate"
+             vertalignment="top"
+             justify="center"/>
+      <HBox height="10"/>
+      <Label style ="generic_control"
+             width="380"
+             text="Would you like to change project sample rate?"
+             winfont="Arial Bold 12"
+             macfont="Helvetica Bold 12"/>
+      <HBox height="10"/>
+      <Label style ="generic_control"
+             width="380"
+             text="Choosing no will disconnect audio device from Audio Engine"
+             winfont="Arial Bold 10"
+             macfont="Helvetica Bold 10"/>
+      <HBox height="30" width="380"/>
+      <HBox spacing="10">
+        <Button id="cancel_button"
+                style="generic_button"
+                text="Cancel"/>
+        <Button id="ok_button"
+                style="generic_button"
+                box.pack="end"
+                text="Ok"/>
+        <Button id="close_button"
+                style="generic_button"
+                box.pack="end"
+                text="Close"/>
+        <Button id="accept_button"
+                style="generic_button"
+                box.pack="end"
+                text="Accept"/>
+        <Button id="yes_button"
+                style="generic_button"
+                box.pack="end"
+                text="Yes"/>
+        <Button id="no_button"
+                style="generic_button"
+                box.pack="end"
+                text="No"/>
+      </HBox>
+    </VBox>
+  </EventBox>
+</Dialog>

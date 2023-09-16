@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialog title="Memory Locations List">
+  <style name="generic_control"
+         bgnormal="#EDECE8"/>
+  <style name="top_bar_control"
+         winfont ="Arial Bold 10"
+         macfont ="Helvetica Bold 10"
+         fgnormal="#6F6F6F"
+         bgnormal="#6C6C6C"
+         fgactive="#BFBFBF"
+         bgactive="#454545"/>
+  <style name="generic_button"
+         style="top_bar_control"
+         bgnormal="#CACAC5"
+         fgactive="#EDECE8"
+         bgactive="#6D6E72"
+         width="80"
+         height="22"/>
+  <style name="tab_button"
+         style="generic_button"
+         bgnormal="#CACAC5"
+         fgactive="#6F6F6F"
+         bgactive="#EDECE8"
+         width="80"
+         height="22"/>
+  <style name="menu_button"
+         style="generic_button"
+         fgnormal="#6F6F6F"
+         bgnormal="#CACAC5"
+         fgactive="#EDECE8"
+         bgactive="#6D6E72"
+         width="80"
+         height="22"/>
+  <EventBox bgnormal="#EDECE8"
+            box.pack="end">
+  <VBox box.fill="true"
+        box.expand="true"
+        height="500">
+    <EventBox bgnormal="#CACAC5">
+        <HBox spacing="1">
+            <Button id="midi_marker_list_tab_button"
+                    width="110"
+                    height="20"
+                    text="Marker List"
+                    style="tab_button"/>
+            <Button id="location_marker_list_tab_button"
+                    width="110"
+                    height="20"
+                    text="Location List"
+                    style="tab_button"/>
+        </HBox>
+    </EventBox>
+    <EventBox bgnormal="#EDECE8"
+              box.fill="true"
+              box.expand="true">
+        <VBox id="tabs_home"
+              box.fill="true"
+              box.expand="true">
+          <EventBox id="midi_marker_list_event_box"
+                    width="920"
+                    bgnormal="#EDECE8"
+                    visible="true"
+                    noshowall="false"
+                    box.fill="true"
+                    box.expand="true">
+              <VBox>
+                  <HBox height="10"/>
+                  <HBox>
+                      <VBox width="10"/>
+                      <Button id="add_midi_marker_template"
+                              bgnormal="#6D6E72"
+                              bgactive="#CACAC5"
+                              fgnormal="#EDECE8"
+                              fgactive="#FFFFFF"
+                              width="160"
+                              height="20"
+                              text="Add Marker Placeholder"
+                              tooltip="Add marker name placeholder"/>
+                  </HBox>
+                  <HBox height="10"/>
+                  <HBox spacing="3">
+                      <VBox width="10"/>
+                      <Label style="generic_control"
+                             width="40"
+                             text="#"/>
+                      <Label style="generic_control"
+                             width="40"
+                             text="Go"/>
+                      <VBox width="4"/>
+                      <Label style="generic_control"
+                             width="120"
+                             text="Name"/>
+                      <Label style="generic_control"
+                             width="60"
+                             text="Locked"/>
+                      <Label style="generic_control"
+                             width="92"
+                             text="Location"/>
+                      <Label style="generic_control"
+                             width="80"
+                             text="Transport Stop"/>
+                      <Label style="generic_control"
+                             width="40"
+                             text="Color"
+                             ui.os.windows="false"/>
+                      <Label style="generic_control"
+                             width="45"
+                             text="Color"
+                             ui.os.macos="false"/>
+                      <VBox width="10"/>
+                      <Label style="generic_control"
+                             width="140"
+                             bgnormal="#ff0000"
+                             text="Program change"/>
+                      <Label style="generic_control"
+                             width="57"
+                             text="Bank"/>
+                      <VBox width="24"/>
+                      <Label style="generic_control"
+                             width="42"
+                             text="Program"/>
+                      <VBox width="28"/>
+                      <Label style="generic_control"
+                             width="42"
+                             text="Channel"/>
+                  </HBox>
+                  <HBox height="10"/>
+                  <ScrolledWindow id="marker_scroll"
+                                  hscroll="never"
+                                  height="150"
+                                  box.expand="true"
+                                  box.fill="true">
+                      <EventBox bgnormal="#EDECE8">
+                          <VBox id="midi_marker_list_home"
+                                spacing="3"
+                                width="850"/>
+                      </EventBox>
+                  </ScrolledWindow>
+                  <HBox height="10"/>
+              </VBox>
+          </EventBox>
+          <EventBox id="location_list_event_box"
+                    width="550"
+                    bgnormal="#EDECE8"
+                    visible="true"
+                    noshowall="false"
+                    box.fill="true"
+                    box.expand="true">
+              <VBox>                  
+                  <HBox height="10"/>
+                  <HBox spacing="3">
+                      <VBox width="10"/>
+                      <Label style="generic_control"
+                             width="40"
+                             text="#"/>
+                      <VBox width="4"/>
+                      <Label style="generic_control"
+                             width="120"
+                            text="Name"/>
+                      <Label style="generic_control"
+                             width="80"
+                             text="Type"/>
+                      <Label style="generic_control"
+                             width="92"
+                             text="Start time"/>
+                      <Label style="generic_control"
+                             width="92"
+                            text="End time"/>
+                      <Label style="generic_control"
+                             width="60"
+                            text="On/Off"/>
+                  </HBox>
+                  <HBox height="10"/>
+                  <ScrolledWindow hscroll="never"
+                                  height="150"
+                                  box.expand="true"
+                                  box.fill="true">
+                      <EventBox bgnormal="#EDECE8">
+                          <VBox id="location_list_home"
+                                spacing="3"
+                                width="850"/>
+                      </EventBox>
+                  </ScrolledWindow>
+                  <HBox height="10"/>
+              </VBox>
+          </EventBox>
+        </VBox>
+    </EventBox>
+  </VBox>
+  </EventBox>
+</Dialog>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout bgnormal="#303030" width="421" height="20">
+  <style name="generic_control"
+         winfont ="Arial Bold 9"
+         macfont ="Helvetica Bold 9"/>
+  <Layout bgnormal="#797979" x="0" y="0" width="291" height="19">
+    <Label style="generic_control"
+           id="midi_device_name_label"
+           text="-"
+           fgnormal="#000000"
+           x="7" y="3"
+           ui.os.macos="false"/>
+    <Label style="generic_control"
+           id="midi_device_name_label"
+           text="-"
+           fgnormal="#000000"
+           x="7" y="6"
+           ui.os.windows="false"/>
+  </Layout>
+  <Button id="capture_on_button"
+    text="On"
+    style="generic_control"
+    fgnormal="#909090"
+    bgnormal="#606060"
+    fgactive="#ffffff"
+    bgactive="#27AE36"
+    borderwidth="0 0 0 0"
+    x="296" y="0" width="30" height="19"/>
+  <Button id="capture_off_button"
+    text="Off"
+    style="generic_control"
+    fgnormal="#909090"
+    bgnormal="#606060"
+    fgactive="#606060"
+    bgactive="#FF7442"
+    borderwidth="0 0 0 0"
+    x="326" y="0" width="30" height="19"/>
+  <Button id="playback_on_button"
+    text="On"
+    style="generic_control"
+    fgnormal="#909090"
+    bgnormal="#606060"
+    fgactive="#ffffff"
+    bgactive="#27AE36"
+    borderwidth="0 0 0 0"
+    x="361" y="0" width="30" height="19"/>
+  <Button id="playback_off_button"
+    text="Off"
+    style="generic_control"
+    fgnormal="#909090"
+    bgnormal="#606060"
+    fgactive="#606060"
+    bgactive="#FF7442"
+    borderwidth="0 0 0 0"
+    x="391" y="0" width="30" height="19"/>
+</Layout>

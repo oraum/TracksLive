@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout bgnormal="#303030" width="274" height="20">
+  <style name="generic_control"
+         winfont ="Arial Bold 9"
+         macfont ="Helvetica Bold 9"/>
+  <Layout bgnormal="#862579" x="0" y="0" width="3" height="20"/>
+  <Layout bgnormal="#797979" x="6" y="0" width="85" height="19">
+    <Label style="generic_control"
+           id="capture_name_label"
+           text="-"
+           fgnormal="#000000"
+           x="7" y="3"/>
+  </Layout>
+  <Button id="capture_on_button"
+    text="On"
+    style="generic_control"
+    fgnormal="#909090"
+    bgnormal="#606060"
+    fgactive="#ffffff"
+    bgactive="#27AE36"
+    borderwidth="0 0 0 0"
+    x="95" y="0" width="29" height="19"/>
+  <Button id="capture_off_button"
+    text="Off"
+    style="generic_control"
+    fgnormal="#909090"
+    bgnormal="#606060"
+    fgactive="#606060"
+    bgactive="#FF7442"
+    borderwidth="0 0 0 0"
+    x="125" y="0" width="29" height="19"/>
+  <Layout bgnormal="#797979" x="158" y="0" width="26" height="19">
+    <Label style="generic_control"
+           id="capture_number_label"
+           text="-"
+           fgnormal="#000000"
+           x="7"
+           y="3"/>
+  </Layout>
+  <Layout bgnormal="#797979" x="186" y="0" width="85" height="19">
+    <Label style="generic_control"
+           id="track_name_label"
+           text="-"
+           fgnormal="#000000"
+           x="7" y="3"/>
+  </Layout>
+</Layout>

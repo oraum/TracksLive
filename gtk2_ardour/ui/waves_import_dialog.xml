@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dialog title="Tracks Live - Add Existing Media"
+        ImportAsTrack="as new tracks"
+        ImportToTrack="to selected tracks"
+        ImportAsRegion="to region list"
+        ImportAsTapeTrack="as new tape tracks"
+        OneTrackPerFile="one track per file"
+        OneTrackPerChannel="one track per channel"
+        SequenceFiles="sequence files"
+        AllFilesInOneTrack="all files in one track"
+        OneRegionPerFile="one region per file"
+        OneRegionPerChannel="one region per channel"
+        AllFilesInOneRegion="all files in one region">
+  <style name="generic_control"
+         winfont ="Arial Bold 10"
+         macfont ="Helvetica Bold 10"
+         fgnormal="#6F6F6F"
+         bgnormal="#6C6C6C"
+         fgactive="#BFBFBF"
+         bgactive="#454545"/>
+  <style name="generic_label"
+         style="generic_control"
+         box.expand="true"
+         box.fill="true"
+         horzalignment="end"/>
+  <style name="generic_button"
+         style="generic_control"
+         bgnormal="#CACAC5"
+         fgactive="#EDECE8"
+         bgactive="#6D6E72"
+         width="80"
+         height="22"/>
+  <style name="generic_dropdown"
+         style="generic_button"
+         fgnormal="#C1C1C1"
+         textcolornormal="#C1C1C1"
+         bgnormal="#6C6C6C"
+         bgdisabled="#EDECE8"
+         fgdisabled="#6F6F6F"
+         normalicon="dropdown_126x20"
+         activeicon="dropdown_126x20_active"
+         inactiveicon="dropdown_126x20_flat"
+         rendertext="true"
+         width="126"
+         height="20"
+         horzalignment="start"
+         textalignment="left"
+		 textindent="5"/>
+  <style name="generic_dropdown_menu"
+         style="generic_dropdown"
+         height="-1"
+         width="-1"/>
+  <EventBox bgnormal="#EDECE8">
+    <VBox borderwidth="10"
+          spacing="10">
+      <VBox spacing="10">
+        <HBox spacing="5">
+          <Label style="generic_label"
+                 text="Add files"/>
+          <Dropdown id="add_as_dropdown"
+                    style="generic_dropdown">
+            <DropdownMenu style="generic_dropdown_menu"/>
+          </Dropdown>
+        </HBox>
+        <HBox id="insert_at_home" spacing="5">
+          <Label style="generic_label"
+                 text="Insert at"/>
+          <Dropdown id="insert_at_dropdown"
+                    style="generic_dropdown">
+            <DropdownMenu style="generic_dropdown_menu">
+              <DropdownItem style="generic_dropdown_menu" title="session start" data="3"/>
+              <DropdownItem style="generic_dropdown_menu" title="playhead" data="2"/>
+              <DropdownItem style="generic_dropdown_menu" title="at timestamp" data="0"/>
+            </DropdownMenu>
+          </Dropdown>
+        </HBox>
+        <HBox spacing="5">
+          <Label style="generic_label"
+                 text="Mapping"/>
+          <Dropdown id="mapping_dropdown"
+                    style="generic_dropdown">
+\            <DropdownMenu style="generic_dropdown_menu">
+              <DropdownItem style="generic_dropdown_menu" title="one track per file" data="0"/>
+              <DropdownItem style="generic_dropdown_menu" title="one track per channel" data="1"/>
+              <DropdownItem style="generic_dropdown_menu" title="sequence files" data="3"/>
+              <DropdownItem style="generic_dropdown_menu" title="all files in one region" data="6"/>
+            </DropdownMenu>
+          </Dropdown>
+        </HBox>
+        <HBox id="quality_home" 
+              spacing="5">
+          <Label style="generic_label"
+                 text="Conversion quality"/>
+          <Dropdown id="quality_dropdown"
+                    style="generic_dropdown">
+            <DropdownMenu style="generic_dropdown_menu">
+              <DropdownItem style="generic_dropdown_menu" title="Best" data="0"/>
+              <DropdownItem style="generic_dropdown_menu" title="Good" data="1"/>
+              <DropdownItem style="generic_dropdown_menu" title="Quick" data="2"/>
+              <DropdownItem style="generic_dropdown_menu" title="Fast"  data="3"/>
+              <DropdownItem style="generic_dropdown_menu" title="Fastest"  data="4"/>
+            </DropdownMenu>
+          </Dropdown>
+        </HBox>
+        <HBox id="copy_to_session_home"
+              spacing="5">
+          <Label style="generic_label"
+                 text="Copy files to session"/>
+          <HBox style="generic_dropdown">
+            <Iconbutton id="copy_to_session_button"
+                        state="active"
+                        width="20"
+                        height="20"
+                        imagewidth="20"
+                        imageheight="20"
+                        normalicon="waves_darker_check_box"
+                        activeicon="waves_darker_check_box_active"
+                        toggleable="true"/>
+          </HBox>
+        </HBox>
+      </VBox>
+      <HBox spacing="10" >
+        <Button id="import_button"
+                style="generic_button"
+                box.pack="end"
+                text="Import"/>
+        <Button id="cancel_button"
+                style="generic_button"
+                box.pack="end"
+                text="Cancel"/>
+      </HBox>
+    </VBox>
+  </EventBox>
+</Dialog>

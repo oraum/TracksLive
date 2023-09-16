@@ -1,0 +1,7 @@
+path_to_preferences="$HOME/AppData/Local/Tracks Live"
+if [ -d "$path_to_preferences" ] ; then
+	# delete Preferences
+	rm -rf "$path_to_preferences"
+else
+	echo "Folder: '$path_to_preferences' could not be found!"  
+fi

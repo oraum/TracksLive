@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GainSlider meterwidth="6"
+            thinmeterwidth="6"
+            peak_level_1_color="#FE0E0E"
+            peak_level_2_color="#FEFE0E"
+            peak_level_3_color="#262626">
+  <Adjustment id="gain_adjustment"
+              minvalue="0"
+              maxvalue="1"
+              step="0.00535"/>
+  <VBox width="97"
+        height="258">
+    <Button id="peak_display_button"
+            x="1"
+            y="0"
+            width="95"
+            height="16"
+            winfont="Arial Bold 12"
+            macfont="Helvetica Bold 12"
+            bgnormal="#262626"
+            bgactive="#262626"
+            fgnormal="#AFAFAF"
+            fgactive="#AFAFAF"
+            bghover="#C47474"
+            bordercolor="#FFFFFF33"
+            borderwidth="0 0 0 0"/>
+    <HBox>
+      <VBox width="1"/>
+      <VBox>
+        <HBox height="13"/>
+        <HBox id="level_meter_home"
+              width="27"
+              height="187"/>
+      </VBox>
+      <VBox width="4"/>
+      <icon normalicon="inspector_background"
+	            width="24"
+	            height="213"/>
+      <VBox width="10"/>
+      <Fader id="gain_slider"
+             adjustment="gain_adjustment"
+             facesource="slider_controller_fader"
+             underlaysource="slider_controller_fader_underlay"
+             handlesource="slider_controller_fader_handle"
+             activehandlesource="slider_controller_fader_handle"
+             touchcursor="fader_touch_cursor"
+             minposx="10"
+             minposy="199"
+             maxposx="10"
+             maxposy="13"
+             x="66"
+             y="24"
+             width="19"
+             height="213"/>
+    </HBox>
+    <Entry id="gain_display_entry"
+           x="1"
+           y="242"
+           width="95"
+           height="16"
+           justify="center"
+           winfont="Arial Bold 12"
+           macfont="Helvetica Bold 12"
+           textcolornormal="#ffffff"
+           textcoloractive="#ffffff"
+           textcolorselected="#ffffff"
+           visible="false"
+           basecolornormal="#424242"
+           hasframe="false"
+           noshowall="true"
+           horzalignment="center"/>
+    <Button id="gain_display_button"
+            x="1"
+            y="242"
+            width="95"
+            height="16"
+            winfont="Arial Bold 12"
+            macfont="Helvetica Bold 12"
+            bgnormal="#424242"
+            bgactive="#afafaf"
+            fgnormal="#24FCD6"
+            fgactive="#afafaf"/>
+  </VBox>
+</GainSlider>

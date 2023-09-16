@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RouteUI width="233"
+         bgnormal="#424242"
+         bgactive="#6C6C6C"
+         peaktreshold="-144.4">
+  <VBox>
+    <EventBox height="1"
+              bgnormal="#494949"
+              bgactive="#494949"/>
+    <HBox height="30">
+      <HBox id="master_bus_hbox"
+            noshowall="true">
+          <EventBox width="1"
+                    bgnormal="#494949"
+                    bgactive="#494949"/>
+          <EventBox width="28"
+                    bgnormal="#424242"
+                    bgactive="#F48E16"/>
+          <EventBox width="6"
+                    bgnormal="#F48E16"
+                    bgactive="#F48E16"/>
+          <EventBox width="1"
+                    bgnormal="#000000"
+                    bgactive="#000000"/>
+          <VBox width="6"/>
+          <Label text="Master Bus"
+                 winfont ="Arial Bold 10"
+                 macfont ="Helvetica Bold 10"
+                 fgnormal="#AFAFAF"
+                 fgactive="#AFAFAF"
+                 width="99"
+                 height="17"
+                 horzalignment="start"
+                 vertalignment="center"/>
+      </HBox>
+      <HBox id="master_bus_empty_hbox"
+            width="141"
+            noshowall="true"/>
+      <iconbutton id="master_mute_button"
+                  width="83"
+                  height="30"
+                  normalicon="master_mute"
+                  activeicon="master_mute_active"
+                  tooltip="Mute"/>
+      <EventBox width="1"
+                bgnormal="#424242"
+                bgactive="#424242"/>
+      <EventBox bgnormal="#424242"
+                bgactive="#6C6C6C">
+        <HBox id="level_meter_home"
+              width="8"/>
+      </EventBox>
+    </HBox>
+    <EventBox height="1"
+              bgnormal="#000000"
+              bgactive="#000000"/>
+  </VBox>
+
+  <EventBox id="no_peak_display_box"
+            width="95"
+            height="13"
+            bgnormal="#B1B1B1"
+            ui.orphan="true"/>
+  <Button id="peak_display_button"
+          text="- inf"
+          width="95"
+          height="13"
+          bgnormal="#B1B1B1"
+          bgactive="#D83838"
+          fgnormal="#000000"
+          fgactive="#000000"
+          bghover="#C47474"
+          ui.orphan="true"/>
+  <icon id="master_bus_multi_out_mode_icon"
+        source="master_bus_multi_out_mode"
+        ui.orphan="true"/>
+</RouteUI>

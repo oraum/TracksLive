@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Window timebarheight="17"
+        rulerheight="64"
+        rulerdivideheight="32"
+        skipbarheight="19"
+        markerheight="17" >
+  <style name="topbar_control"
+	     bgnormal="#535353"
+		 bgactive="#535353"
+		 fgdisabled="#C0C0C0"
+		 fgnormal="#C0C0C0"
+		 fgactive="#C0C0C0"
+		 winfont ="Arial 10"
+		 macfont ="Helvetica 10"/>
+  <style name="topbar_button"
+		 style="topbar_control"
+		 width="63"
+		 height="18"
+		 textalignment="left"
+		 textindent="8"/>
+  <style name="topbar_dropdown"
+		 style="topbar_button"/>
+  <style name="generic_dropdown"
+         bgnormal="#6C6C6C"
+         bgactive="#454545"
+         bghover="#898989"
+         fgnormal="#ffffff"
+         fgactive="#BFBFBF"
+         fghover="#CCCCCC"
+         winfont ="Arial 10"
+         macfont ="Helvetica 10"/>
+  <style name="generic_dropdown_menu"
+         style="generic_dropdown"
+         winfont ="Arial Bold 9"
+         macfont ="Helvetica 10"
+         bgnormal="#424242"/>
+
+  <style name="topbar_dropdown_menu"
+         bgnormal="#535353"
+         fgnormal="#C0C0C0"
+         fgactive="#C0C0C0"
+         winfont ="Arial Bold 9"
+         macfont ="Helvetica Bold 10"/>
+  <VBox id="vpacker">
+    <Adjustment id="vertical_adjustment"
+                initial_value="0"
+                minvalue="0"
+                maxvalue="10"
+                step="400"/>
+    <Adjustment id="horizontal_adjustment"
+                initial_value="0"
+                minvalue="0"
+                maxvalue="10"
+                step="400"/>
+    <Adjustment id="unused_adjustment"
+                initial_value="0"
+                minvalue="0"
+                maxvalue="10"
+                step="400"/>
+    <Adjustment id="waves_zoom_adjustment"
+                initial_value="0"
+                minvalue="0"
+                maxvalue="10"
+                step="0.1"
+                pagesize="1.0"/>
+    <EventBox bgnormal="#424242"
+              ui.os.macos="false">
+      <VBox>
+        <EventBox bgnormal="#000000"
+                  height="2"/>
+        <HBox id="menu_bar_home">
+          <EventBox bgnormal="#000000"
+                    width="2"/>
+          <EventBox bgnormal="#000000"
+                    box.pack="end"
+                    width="2"/>
+        </HBox>
+      </VBox>
+    </EventBox>
+    <EventBox bgnormal="#000000">
+      <VBox borderwidth="2" spacing ="1">
+        <EventBox bgnormal="#282828">
+          <HBox borderwidth="1" spacing ="1">
+            <iconbutton id="tracks_button"
+                        width="48"
+                        height="51"
+                        normalicon="tracks"
+                        activeicon="tracks_active"/>
+            <Layout width="461"
+                    height="51"
+                    bgnormal="#424242">
+			  <Label style="topbar_control"
+				     text="Start"
+				     winfont ="Arial Bold 9"
+				     macfont ="Helvetica Bold 10"
+					 fgnormal="#FFFFFF"
+					 x="6"
+				     y="5"/>
+			  <Label style="topbar_control"
+				     text="End"
+				     winfont ="Arial Bold 9"
+    				 macfont ="Helvetica Bold 10"
+				     fgnormal="#FFFFFF"
+				     x="6"
+				     y="21"/>
+ 			  <Label style="topbar_control"
+				     text="Length"
+				     winfont ="Arial Bold 9"
+				     macfont ="Helvetica Bold 10"
+				     fgnormal="#FFFFFF"
+				     x="6"
+				     y="36"/>
+              <HBox id="time_info_box_home"
+                    width="407"
+                    height="51"
+                    x="60"
+                    y="4"/>
+              <HBox id="primary_clock_home"
+                    x="122"
+                    y="3"/>
+              <Dropdown id="display_format_dropdown"
+                        style="topbar_dropdown"
+                        x="200"
+                        y="28">
+                <DropdownMenu style="topbar_dropdown_menu"/>
+              </Dropdown>
+              <Button id="bit_depth_button"
+                      style="topbar_button"
+                      x="269"
+                      y="5"/>
+              <Dropdown id="sample_rate_dropdown"
+                        style="topbar_dropdown"
+                        x="269"
+                        y="28">
+                <DropdownMenu style="topbar_dropdown_menu"/>
+              </Dropdown>
+				<Layout bgnormal="#028D9E"
+					x="334"
+					y="1"
+					width="126"
+					height="49">
+				  <EventBox bgnormal="#424242"
+					        x="2"
+					  		y="2">
+					<VBox borderwidth="2"
+						  spacing="5">
+						<Dropdown id="timecode_selector_dropdown"
+                        		  style="topbar_dropdown">
+                		  <DropdownMenu style="topbar_dropdown_menu"/>
+						</Dropdown>
+						<Button id="frame_rate_button"
+                        		style="topbar_button"/>
+					</VBox>
+				  </EventBox>
+			<icon id="mtc_idle_indicator"
+				normalicon="mtc_idle"
+				width="53"
+				height="41"
+				x="71"
+				y="4"
+				visible="false"
+				noshowall="true"/>
+			<label id="tc_source_indicator"
+				   text="TC\nSource"
+				   width="53"
+				   height="41"
+				   x="71"
+				   y="4"
+				   winfont ="Arial Bold 10"
+				   macfont ="Helvetica 11"
+				   fgnormal="#FFFFFF"
+				   horzalignment="center"
+				   justify="center"
+				   visible="false"
+				   noshowall="true"/>
+			<icon id="mtc_sync_indicator"
+				  width="53"
+				  height="41"
+				  normalicon="mtc_sync"
+				  x="71"
+				  y="4"
+				  visible="false"
+				  noshowall="true"/>
+			<icon id="ltc_idle_indicator"
+				width="53"
+				height="41"
+				normalicon="ltc_idle"
+				x="71"
+				y="4"
+				visible="false"
+				noshowall="true"/>
+			<icon id="ltc_sync_indicator"
+				width="53"
+				height="41"
+				normalicon="ltc_sync"
+				x="71"
+				y="4"
+				visible="false"
+				noshowall="true"/>
+            </Layout>
+            </Layout>
+            <Layout bgnormal="#424242"
+                    box.padding="1"
+                    box.fill="true"
+                    box.expand="true">
+            </Layout>
+            <Layout bgnormal="#424242"
+                    width="114"
+                    height="51"
+                    box.pack="end">
+              <icon normalicon="metrics_display"
+                    width="50"
+                    height="51"
+                    imagewidth="114"
+                    imageheight="51"/>
+              <Adjustment id="dsp_load_adjustment"
+                          minvalue="1"
+                          maxvalue="100"
+                          initialvalue="50"
+                          readonly="fals"/>
+              <Fader adjustment="dsp_load_adjustment"
+                     facesource="dsp_load_fader_face"
+                     handlesource="dsp_load_fader_handle"
+                     minposx="0"
+                     minposy="3"
+                     maxposx="56"
+                     maxposy="3"
+                     readonly="true"
+                     x="29"
+                     y="8"
+                     width="56"
+                     height="5"/>
+              <Label id="dsp_load_label"
+                     style="topbar_control"
+                     text="%"
+                     winfont ="Arial 8"
+                     macfont ="Helvetica 8"
+                     x="88"
+                     y="6"/>
+              <Adjustment id="hd_load_adjustment"
+                          minvalue="1"
+                          maxvalue="100"
+                          initialvalue="50"
+                          readonly="fals"/>
+              <Fader adjustment="hd_load_adjustment"
+                     facesource="hd_load_fader_face"
+                     handlesource="dsp_load_fader_handle"
+                     minposx="0"
+                     minposy="3"
+                     maxposx="56"
+                     maxposy="3"
+                     readonly="true"
+                     x="29"
+                     y="16"
+                     width="56"
+                     height="5"/>
+              <Label id="hd_load_label"
+                     style="topbar_control"
+                     text="%"
+                     winfont ="Arial 8"
+                     macfont ="Helvetica 8"
+                     x="88"
+                     y="14"/>
+
+              <Label id="hd_remained_time"
+                     style="topbar_control"
+                     winfont ="Arial 9"
+                     macfont ="Helvetica 9"
+                     x="59"
+                     y="34"/>
+            </Layout>
+            <VBox box.pack="end"/>
+            <VBox spacing ="1"
+                  box.pack="end">
+              <iconbutton id="mode_stereo_out_button"
+                          tooltip="Stereo Out Mode"
+                          width="79" height="25"
+                          normalicon="mode_stereo_out"
+                          activeicon="mode_stereo_out_active"
+                          state="active"/>
+              <iconbutton id="mode_multi_out_button"
+                          tooltip="Multi Out Mode"
+                          width="79" height="25"
+                          normalicon="mode_multi_out"
+                          activeicon="mode_multi_out_active"/>
+            </VBox>
+          </HBox>
+        </EventBox>
+        <EventBox height="28"
+                  box.fill="true"
+                  box.expand="true"
+                  bgnormal="#424242">
+          <HBox borderwidth="1"
+                  spacing="1">
+            <iconbutton id="inspector_on_button"
+                        tooltip="Show/Hide Inspector"
+                        width="48"
+                        height="26"
+                        normalicon="inspector_on"
+                        activeicon="inspector_on_active"/>
+            <iconbutton id="mixer_on_button"
+                        tooltip="Show/Hide Mixer"
+                        width="48"
+                        height="26"
+                        normalicon="mixer_on"
+                        activeicon="mixer_on_active"/>
+            <iconbutton id="meter_bridge_on_button"
+                        tooltip="Show/Hide Meter Bridge"
+                        width="48"
+                        height="26"
+                        normalicon="meter_bridge_on"
+                        activeicon="meter_bridge_on_active"/>
+            <VBox width="54"
+                      height="26"/>
+            <iconbutton id="transport_start_button"
+                        tooltip="Rewind"
+                        width="34"
+                        height="26"
+                        normalicon="transport_start"
+                        activeicon="transport_start_active"/>
+            <iconbutton id="transport_end_button"
+                        tooltip="Forward"
+                        width="34"
+                        height="26"
+                        normalicon="transport_end"
+                        activeicon="transport_end_active"/>
+            <iconbutton id="transport_play_button"
+                        tooltip="Play"
+                        width="34"
+                        height="26"
+                        actonrelease="false"
+                        normalicon="transport_play"
+                        activeicon="transport_play_active"/>
+            <iconbutton id="transport_record_button"
+                        tooltip="Record"
+                        width="34"
+                        height="26"
+                        actonrelease="false"
+                        normalicon="transport_record"
+                        activeicon="transport_record_active"/>
+            <iconbutton id="transport_stop_button"
+                        tooltip="Stop"
+                        width="34"
+                        height="26"
+                        actonrelease="false"
+                        normalicon="transport_stop"
+                        activeicon="transport_stop_active"/>
+            <iconbutton id="transport_loop_button"
+                        tooltip="Loop"
+                        width="34"
+                        height="26"
+                        actonrelease="false"
+                        normalicon="transport_loop"
+                        activeicon="transport_loop_active"/>
+            <iconbutton id="lock_session_button"
+                        tooltip="Lock"
+                        width="34"
+                        height="26"
+                        normalicon="lock_session"
+                        activeicon="lock_session_active"/>
+            <VBox width="60"
+                      height="26"/>
+            <iconbutton id="tool_marker_button"
+                        tooltip="Range Select Tool"
+                        width="34"
+                        height="26"
+                        normalicon="tool_marker"
+                        activeicon="tool_marker_active"/>
+            <iconbutton id="tool_arrow_button"
+                        tooltip="Pointer Tool"
+                        width="34"
+                        height="26"
+                        normalicon="tool_arrow"
+                        activeicon="tool_arrow_active"/>
+            <iconbutton id="tool_cut_button"
+                        tooltip="Split Tool"
+                        width="34"
+                        height="26"
+                        normalicon="tool_cut"
+                        activeicon="tool_cut_active"/>
+            <iconbutton id="tool_zoom_button"
+                        tooltip="Zoom Tool"
+                        width="34"
+                        height="26"
+                        normalicon="tool_zoom"
+                        activeicon="tool_zoom_active"/>
+            <VBox box.fill="true"
+                  box.expand="true"/>
+            <Adjustment id="temporal_zoom_adjustment"
+                        minvalue="0"
+                        maxvalue="23"
+                        initialvalue="4"
+                        step="-1"
+                        pageincrement="-1"/>
+            <Adjustment id="vertical_zoom_adjustment"
+                        minvalue="1"
+                        maxvalue="32"
+                        initialvalue="2"
+                        step="1"
+                        pageincrement="1"/>
+            <EventBox tooltip="Vertical Zoom">
+              <Fader id="vertical_zoom_fader"
+                     adjustment="vertical_zoom_adjustment"
+                     facesource="vertical_zoom_fader_face"
+                     handlesource="zoom_fader_handle"
+                     activehandlesource="zoom_fader_handle_active"
+                     width="74"
+                     height="26"
+                     minposx="20"
+                     minposy="13"
+                     maxposx="66"
+                     maxposy="13"/>
+            </EventBox>
+            <EventBox tooltip="Horizontal Zoom">
+              <Fader adjustment="temporal_zoom_adjustment"
+                     facesource="horizontal_zoom_fader_face"
+                     handlesource="zoom_fader_handle"
+                     activehandlesource="zoom_fader_handle_active"
+                     width="74"
+                     height="26"
+                     minposx="66"
+                     minposy="13"
+                     maxposx="20"
+                     maxposy="13"/>
+            </EventBox>
+            <EventBox id="waves_zoom_control_home"
+                      tooltip="Waveform Zoom"
+                      width="48"
+                      height="26"
+                      bgnormal="#ffff00"/>
+            <iconbutton id="media_button"
+                        tooltip="Media Button"
+                        width="48"
+                        height="26"
+                        normalicon="media_button"
+                        activeicon="media_button_active"/>
+          </HBox>
+        </EventBox>
+      </VBox>
+    </EventBox>
+    <EventBox bgnormal="#000000"
+              box.pack="end"
+              height="2"/>
+    <HBox box.pack="end"
+          box.fill="true"
+          box.expand="true">
+      <EventBox bgnormal="#000000" width="2"/>
+      <EventBox id="inspector_home"/>
+      <VBox box.fill="true"
+            box.expand="true">
+        <EventBox id="compact_meter_bridge_home"
+                  bgnormal="#383838"/>
+        <HPaned id="edit_pane"
+                box.fill="true"
+                box.expand="true">
+          <VPaned id="editor_summary_pane"
+                  paned.resize="true"
+                  paned.shrink="true">
+            <Table id="edit_packer"
+                   rows="4"
+                   columns="3">
+              <HBox table.leftattach="0"
+                    table.rightattach="3"
+                    table.topattach="0"
+                    table.bottomattach="1"
+                    table.xfill="true"
+                    table.yfill="true">
+                <EventBox bgnormal="#424242"
+                          height="1"
+                          width="233"/>
+                <EventBox bgnormal="#000000"
+                          height="1"
+                          width="1"/>
+                <EventBox bgnormal="#424242"
+                          height="1"
+                          box.expand="true"
+                          box.fill="true"/>
+              </HBox>
+              <HBox table.leftattach="0"
+                    table.rightattach="1"
+                    table.topattach="1"
+                    table.bottomattach="2"
+                    table.xfill="false"
+                    table.yfill="false">
+                <VBox id="timebars_vbox">
+                  <VBox id="marker_lane"
+                        noshowall="true">
+                    <EventBox bgnormal="#424242">
+                      <HBox noshowall="true">
+                        <Icon normalicon="marker_label"
+                              width="50"
+                              height="16"/>
+                        <EventBox width="1"
+                                  bgnormal="#424242"/>
+                        <Dropdown id="midi_input_dropdown"
+                                  style="generic_dropdown"
+                                  width="65"
+                                  height="16"
+                                  normalicon="marker_midi_dropdown"
+                                  activeicon="marker_midi_dropdown_active">
+                          <HBox>
+                            <!--
+                          The following three icons should be shown/hidden according to the
+                          availability/activity of the MIDI inputs
+                          -->
+                            <Icon id="midi_input_enabled_indicator"
+                                  normalicon="midi_input_enabled_indicator"
+                                  width="65"
+                                  height="16"
+                                  noshowall="true"/>
+                            <Icon id="midi_input_disabled_indicator"
+                                  normalicon="midi_input_disabled_indicator"
+                                  width="65"
+                                  height="16"
+                                  visible="false"
+                                  noshowall="true"/>
+                            <Icon id="midi_input_activity_indicator"
+                                  normalicon="midi_input_activity_indicator"
+                                  width="65"
+                                  height="16"
+                                  visible="false"
+                                  noshowall="true"/>
+                          </HBox>
+                          <DropdownMenu style="generic_dropdown_menu"/>
+                        </Dropdown>
+                        <EventBox width="1"
+                                  bgnormal="#424242"/>
+                        <Dropdown id="midi_output_dropdown"
+                                  style="generic_dropdown"
+                                  width="65"
+                                  height="16"
+                                  normalicon="marker_midi_dropdown"
+                                  activeicon="marker_midi_dropdown_active">
+                          <HBox>
+                            <!--
+                          The following three icons should be shown/hidden according to the
+                          availability/activity of the MIDI outputs
+                          -->
+                            <Icon id="midi_output_enabled_indicator"
+                                  normalicon="midi_output_enabled_indicator"
+                                  width="65"
+                                  height="16"
+                                  noshowall="true"/>
+                            <Icon id="midi_output_disabled_indicator"
+                                  normalicon="midi_output_disabled_indicator"
+                                  width="65"
+                                  height="16"
+                                  visible="false"
+                                  noshowall="true"/>
+                            <Icon id="midi_output_activity_indicator"
+                                  normalicon="midi_output_activity_indicator"
+                                  width="65"
+                                  height="16"
+                                  visible="false"
+                                  noshowall="true"/>
+                          </HBox>
+                          <DropdownMenu style="generic_dropdown_menu"/>
+                        </Dropdown>
+                        <EventBox width="1"
+                                  bgnormal="#424242"/>
+                        <iconbutton id="add_marker_button"
+                                    width="41"
+                                    height="16"
+                                    normalicon="add_marker_button"
+                                    activeicon="add_marker_button_active"
+                                    tooltip="Add Marker"/>
+                        <EventBox width="1"
+                                  bgnormal="#424242"/>
+                      </HBox>
+                    </EventBox>
+                    <EventBox height="1"
+                              bgnormal="#A9A9A9"/>
+                  </VBox>
+                  <VBox id="skip_playback_lane"
+                        noshowall="true">
+                    <EventBox box.padding="1" bgnormal="#424242">
+                      <HBox spacing="1">
+                        <Icon normalicon="skip_lane_label"
+                              width="182"
+                              height="14"/>
+                        <iconbutton id="skip_button"
+                                  width="41"
+                                  height="16"
+                                  normalicon="skip_off"
+                                  activeicon="skip_on"/>
+                      </HBox>
+                    </EventBox>
+                    <EventBox height="1"
+                              bgnormal="#A9A9A9"/>
+                  </VBox>
+                  <HBox id="global_tracks_hbox"
+                        spacing="1">
+                    <Dropdown id="global_tracks_dropdown"
+                              style="generic_dropdown"
+                              width="140"
+                              height="30"
+                              normalicon="global_tracks_button"
+                              activeicon="global_tracks_button"
+                              tooltip="Show/Hide Global Tracks">
+                      <DropdownMenu style="generic_dropdown_menu">
+                        <DropdownCheckItem id="global_tracks_marker_ruler_menu_item"
+                                           title="Skip Ruler"
+                                           horzalignment="start"/>
+                        <DropdownCheckItem id="global_tracks_skip_ruler_menu_item"
+                                           title="Marker Ruler"
+                                           horzalignment="start"/>
+                      </DropdownMenu>
+                    </Dropdown>
+                    <iconbutton id="global_rec_button"
+                                width="41"
+                                height="30"
+                                normalicon="global_rec_button"
+                                activeicon="global_rec_button_active"
+                                tooltip="Global Record"/>
+                    <iconbutton id="global_solo_button"
+                                width="41"
+                                height="30"
+                                normalicon="global_solo_button"
+                                activeicon="global_solo_button_active"
+                                tooltip="Global Solo"/>
+                    <EventBox width="8"
+                              bgnormal="#424242"/>
+                  </HBox>
+                  <EventBox height="1"
+                            bgnormal="#424242"/>
+                  <EventBox height="1"
+                            bgnormal="#000000"/>
+                  <EventBox id="master_bus_ui_home"/>
+                </VBox>
+                <EventBox width="1"
+                          bgnormal="#000000"/>
+              </HBox>
+              <HBox table.leftattach="0"
+                    table.rightattach="1"
+                    table.topattach="2"
+                    table.bottomattach="3"
+                    table.yfill="true"
+                    table.yexpand="true">
+                <Layout id="controls_layout"
+                        hadjustment="unused_adjustment"
+                        vadjustment="vertical_adjustment"
+                        bgnormal="#3E3E3E">
+                  <VBox id="edit_controls_vbox"
+                        width="233"/>
+                </Layout>
+                <EventBox width="1"
+                          bgnormal="#000000"/>
+
+              </HBox>
+              <VScrollbar adjustment="vertical_adjustment"
+                          table.leftattach="2"
+                          table.rightattach="3"
+                          table.topattach="2"
+                          table.bottomattach="3"
+                          table.yfill="true"
+                          bgnormal="#353535"/>
+              <HScrollbar adjustment="horizontal_adjustment"
+                          table.leftattach="1"
+                          table.rightattach="2"
+                          table.topattach="3"
+                          table.bottomattach="4"
+                          table.xfill="true"
+                          bgnormal="#353535"/>
+              <VBox table.leftattach="0"
+                    table.rightattach="1"
+                    table.topattach="3"
+                    table.bottomattach="4"
+                    table.xfill="true"
+                    table.yfill="true">
+                <EventBox bgnormal="#000000"
+                          height="1"/>
+                <HBox box.fill="true"
+                      box.expand="true">
+                  <EventBox bgnormal="#6C6C6C"
+                            box.fill="true"
+                            box.expand="true"/>
+                  <EventBox bgnormal="#000000"
+                            width="1"/>
+                </HBox>
+              </VBox>
+            </Table>
+          </VPaned>
+        </HPaned>
+        <EventBox id="mixer_bridge_view_home"
+                  box.pack="end"
+                  visible="false"
+                  noshowall="true"/>
+        <EventBox id="meter_bridge_view_home"
+                   box.pack="end"
+                   visible="false"
+                   noshowall="true"
+                   box.fill="true"
+                   box.expand="true"/>
+      </VBox>
+      <EventBox bgnormal="#000000" width="2"/>
+    </HBox>
+  </VBox>
+</Window>

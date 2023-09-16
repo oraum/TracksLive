@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RouteUI bgnormal="#424242"
+         bgactive="#424242">
+  <EventBox id="pad"
+            borderwidth="1"
+            ui.orphan="true"/>
+  <VBox>
+    <EventBox height="1"
+              bgnormal="#494949"
+              bgactive="#494949"/>
+    <EventBox id="frame"
+              bgnormal="#424242"
+              bgactive="#FFFFFF"
+              box.fill="true"
+              box.expand="true">
+      <Vbox borderwidth="1">
+        <EventBox id="upper_drop_indicator"
+                  visible="false"
+                  noshowall="true"
+                  height="2"
+                  bgnormal="#1CA3B3"
+                  bgactive="#1CA3B3"/>
+        <EventBox id="pad"
+                  bgnormal="#424242"
+                  box.expand="true"
+                  box.fill="true">
+
+          <HBox box.fill="true"
+                box.expand="true">
+            <HBox box.expand="true"
+                  box.fill="true">
+              <EventBox id="selected_track_color_box"
+                        width="28"
+                        bgnormal="#424242"
+                        bgactive="#5BA55C">
+                <HBox>
+                  <VBox width="2"
+                        box.pack="end"/>
+                  <VBox box.pack="end">
+                    <HBox height="1"/>
+                    <Label id="number_label"
+                           text="32"
+                           fgnormal="#BAB9B9"
+                           fgactive="#ffffff"
+                           justify="right"
+                           winfont ="Arial Bold 10"
+                           macfont ="Helvetica Bold 10"/>
+                  </VBox>
+                </HBox>
+              </EventBox>
+              <EventBox id="track_color_box"
+                        width="6"
+                        bgnormal="#5BA55C"
+                        bgactive="#5BA55C"/>
+              <EventBox width="1"
+                        bgnormal="#000000"
+                        bgactive="#000000"/>
+            </HBox>
+            <HBox width="108">
+              <HBox width="5"/>
+              <VBox id="name_label_home">
+                <FocusEntry id="name_entry"
+                            width="83"
+                            height="20"
+                            fgnormal="#ffffff"
+                            winfont ="Arial 10"
+                            macfont ="Helvetica 10"
+                            textcolornormal="#acacac"
+                            textcoloractive="#acacac"
+                            textcolorselected="#ffffff"
+                            basecolornormal="#424242"
+                            bgselected="#424242"
+                            horzalignment="start"
+                            hasframe="false"
+                            noshowall="true"
+                            visible="false"/>
+                <HBox height="5"/>
+                <Label id="name_label"
+                       width="83"
+                       winfont ="Arial 10"
+                       macfont ="Helvetica 10"
+                       fgnormal="#acacac"
+                       fgactive="#ffffff"
+                       horzalignment="start"/>
+              </VBox>
+            </HBox>
+            <VBox>
+              <HBox box.padding="2"
+                    spacing="1">
+                <iconbutton id="rec_enable_button"
+                            width="38"
+                            height="16"
+                            normalicon="time_axis_record"
+                            activeicon="time_axis_record_active"
+                            implicitactiveicon="time_axis_record_safe"
+                            tooltip="Record Enable"/>
+                <iconbutton id="monitor_input_button"
+                            width="38"
+                            height="16"
+                            normalicon="time_axis_monitor_input"
+                            activeicon="time_axis_monitor_input_active"
+                            tooltip="Input Monitoring"/>
+              </HBox>
+              <HBox spacing="1">
+                <iconbutton id="mute_button"
+                            width="38"
+                            height="16"
+                            normalicon="time_axis_mute"
+                            activeicon="time_axis_mute_active"
+                            implicitactiveicon="time_axis_mute_implicit"
+                            tooltip="Mute"/>
+                <iconbutton id="solo_button"
+                            width="38"
+                            height="16"
+                            normalicon="time_axis_solo"
+                            activeicon="time_axis_solo_active"
+                            implicitactiveicon="time_axis_solo_safe"
+                            tooltip="Solo"/>
+
+              </HBox>
+            </VBox>
+            <VBox width="4"/>
+            <VBox id="gain_meter_home"
+                  width="7"/>
+          </HBox>
+        </EventBox>
+        <EventBox id="lower_drop_indicator"
+                  visible="false"
+                  noshowall="true"
+                  height="2"
+                  bgnormal="#1CA3B3"
+                  bgactive="#1CA3B3"/>
+      </Vbox>
+    </EventBox>
+    <EventBox height="1"
+              bgnormal="#000000"
+              bgactive="#000000"/>
+  </VBox>
+  <iconbutton id="playlist_button"
+              width="21"
+              height="20"
+              normalicon="time_axis_playlist"
+              activeicon="time_axis_playlist"
+              _prelighticon="time_axis_playlist"
+              ui.orphan="true"/>
+  <Button id="master_mute_button"
+          ui.orphan="true"/>
+  <EventBox id="rec_enable_indicator_on"
+            ui.orphan="true"/>
+  <EventBox id="rec_enable_indicator_off"
+            ui.orphan="true"/>
+  <Button id="show_sends_button" ui.orphan="true"/>
+  <Button id="monitor_disk_button" ui.orphan="true"/>
+  <Button id="comment_button" ui.orphan="true"/>
+  <Button id="midi_input_enable_button" ui.orphan="true"/>
+  <Button id="group_button" text="Grp" ui.orphan="true"/>
+  <Button id="route_group_button" ui.orphan="true"/>
+  <Button id="automation_button" ui.orphan="true"/>
+</RouteUI>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LocationListItem>
+    <style name="generic_control"
+           winfont ="Arial Bold 10"
+           macfont ="Helvetica Bold 10"
+           fgnormal="#6D6E72"
+           bgnormal="#6C6C6C"
+           fgactive="#6D6E72"
+           bgactive="#454545"
+           fghover="#CCCCCC"
+           bghover="#898989"/>
+    <style name="generic_button"
+           winfont ="Arial Bold 10"
+           macfont ="Helvetica Bold 10"
+           fgnormal="#6D6E72"
+           textcolornormal="#6D6E72"
+           bgnormal="#CACAC5"
+           basenormal="#CACAC5"
+           fgactive="#EDECE8"
+           bgactive="#6D6E72"
+           borderwidth="0 0 0 0"
+           bordercolor="#6D6E72"/>
+    <style name="generic_dropdown"
+           style="generic_control"
+           bgnormal="#6C6C6C"
+           basenormal="#6C6C6C"
+           fgnormal="#C1C1C1"
+           textcolornormal="#C1C1C1"/>
+    <EventBox bgnormal="#EDECE8"
+              bgselected="#929292"
+              height="17">
+        <HBox spacing="3">
+                <VBox width="10"/>
+                <Label id="order_number_label"
+                       style="generic_control"
+                       width="40"
+                       height="17"
+                       text="NUM"/>
+                <VBox width="5"/>
+                <HBox>
+                    <Button id="name_button"
+                            style="generic_control"
+                            bgnormal="#EDECE8"
+                            bgactive="#EDECE8"
+                            bgselected="#929292"
+                            fgnormal="#6D6E72"
+                            fgactive="#6D6E72"
+                            width="120"
+                            height="17"/>
+                    <EventBox id="name_entry_eventbox"
+                              style="generic_control"
+                              width="120"
+                              height="17"
+                              noshowall="true"
+                              visible="false">
+                            <FocusEntry id="name_entry"
+                                        style="generic_dropdown"
+                                        width="120"
+                                        height="17"
+                                        fgnormal="#ffffff"
+                                        winfont ="Arial 10"
+                                        macfont ="Helvetica 10"
+                                        cssname="EditorTrackNameDisplay"
+                                        textcolornormal="#ffffff"
+                                        textcoloractive="#ffffff"
+                                        textcolorselected="#ffffff"
+                                        noshowall="true"
+                                        visible="false"/>
+                    </EventBox>
+                </HBox>
+                <VBox width="10"
+                          bgnormal="#EDECE8"/>
+                <Label id="type_label"
+                       style="generic_control"
+                       text="TYPE"
+                       width="50"
+                       horzalignment="center"/>
+                <VBox width="30"/>
+                <HBox>
+                    <Button id="start_clock_button"
+                            style="generic_control"
+                            bgnormal="#EDECE8"
+                            bgactive="#EDECE8"
+                            bgselected="#929292"
+                            fgnormal="#6D6E72"
+                            fgactive="#6D6E72"
+                            width="70"
+                            height="17"/>
+                    <HBox id="start_clock_home"
+                          width="70"
+                          noshowall="true"
+                          visible="false"/>
+                </HBox>
+                <VBox width="20"/>
+                <HBox>
+                    <Button id="end_clock_button"
+                            style="generic_control"
+                            bgnormal="#EDECE8"
+                            bgactive="#EDECE8"
+                            bgselected="#929292"
+                            fgnormal="#6D6E72"
+                            fgactive="#6D6E72"
+                            width="70"
+                            height="17"/>
+                    <HBox   id="end_clock_home"
+                            width="70"
+                            noshowall="true"
+                            visible="false"/>
+                </HBox>
+                <VBox width="11"/>
+                <VBox>
+                    <HBox height="1"/>
+                    <iconbutton id="on_off_button"
+                                width="41"
+                                height="16"
+                                normalicon="skip_off"
+                                activeicon="skip_on"
+                                visible="false"
+                                noshowall="true"/>
+                </VBox>
+        </HBox>
+    </EventBox>
+</LocationListItem>

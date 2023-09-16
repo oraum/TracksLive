@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CompactMeterbridge bgnormal="#353535">
+  <VBox>
+    <HBox>
+      <VBox width="11"/>
+      <VBox>
+        <icon normalicon="meter_bridge_level_scale"
+              width="17"
+              height="53"
+              box.padding="16"/>
+      </VBox>
+      <VBox width="4"/>
+      <ScrolledWindow id="scroller"
+                      hscroll="always"
+                      vscroll="never"
+                      box.expand="true"
+                      box.fill="true">
+        <EventBox bgnormal="#353535">
+          <VBox>
+            <Hbox height="1"/>
+            <HBox>
+              <Hbox id="compact_meter_strips_home"
+                    spacing="3"
+                    height="66"/>
+            </HBox>
+          </VBox>
+        </EventBox>
+      </ScrolledWindow>
+    </HBox>
+    <EventBox bgnormal="#000000"
+              height="2"/>
+  </VBox>
+</CompactMeterbridge>

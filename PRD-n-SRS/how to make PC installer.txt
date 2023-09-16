@@ -1,0 +1,15 @@
+Windows
+
+1. Start Windows
+2. Enter password for log-in: zhenya_8
+3. Pull all changes from git. Passphrase: fencing
+4. In minGW run: bar rebuild —optimize 
+5. Open windows installer project: C:\WS\GIT\tracks_daw\tracks\tools\windows_packaging\TracksLiveSetup.sln
+6. In the installer project:
+	6.1 Open panel General Information
+	6.2 Generate new Product Code (click on “…” at the right edge of the item “Product Code”)
+	6.3 Choose in main menu: Build->Build Solution
+In case of success you will see: ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped =========
+7. New created installer file is available:
+C:\WS\GIT\tracks_daw\tracks\tools\windows_packaging\TracksLiveSetup\TracksLiveSetup\TracksLiveSetup\Express\SingleImage\DiskImages\DISK1\Tracks Live Install-1.1.0.exe
+8. Manually rename installer file: Tracks Live Install-1.2.0.exe => Tracks Live Install-1.2.0-x.exe, where x - number of the current commit in git. You can see the commit number in bar/par log or in Tracks Live (otherwise, Splash screen or About dialog).

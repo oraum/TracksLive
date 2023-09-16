@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VBox>
+  <style name="generic_control"
+         winfont ="Arial Bold 10"
+         macfont ="Helvetica Bold 10"
+         fgnormal="#6D6E72"
+         bgnormal="#6C6C6C"
+         fgactive="#BFBFBF"
+         bgactive="#454545"
+         fghover="#CCCCCC"
+         bghover="#898989"/>
+  <style name="generic_button"
+         winfont ="Arial Bold 10"
+         macfont ="Helvetica Bold 10"
+         fgnormal="#6D6E72"
+         textcolornormal="#6D6E72"
+         bgnormal="#CACAC5"
+         basenormal="#CACAC5"
+         fgactive="#EDECE8"
+         bgactive="#6D6E72"
+         borderwidth="0 0 0 0"
+         bordercolor="#6D6E72"/>
+  <style name="generic_dropdown"
+         style="generic_button"
+         fgnormal="#EDECE8"
+         normalicon="dropdown_90x20"
+         activeicon="dropdown_90x20_active"
+         inactiveicon="dropdown_90x20_inactive"
+         width="90"
+         height="20"
+         horzalignment="start"/>
+  <style name="generic_dropdown_menu"
+         style="generic_dropdown"/>
+  <VBox spacing="5">
+    <Label style="generic_control"
+         text="Format options"
+         vertalignment="bottom"
+         horzalignment="start"/>
+  <HBox>
+    <VBox width="18"/>
+    <HBox id="format_selector_home"/>
+  </HBox>
+  </VBox>
+  <VBox spacing="5">
+  <Label style="generic_control"
+         text="Location options"
+         height="25"
+         vertalignment="bottom"
+         horzalignment="start"/>
+  <HBox>
+    <VBox width="18"/>
+    <VBox id="filename_selector_home"/>
+  </HBox>
+  </VBox>    
+</VBox>
