@@ -577,7 +577,7 @@ int main() { return 0; }''',
         compiler_flags.append('-DENABLE_NLS')
 
     compiler_flags.append ('-DPROGRAM_NAME="' + Options.options.program_name + '"')
-    compiler_flags.append ('-DPROGRAM_VERSION="' + PROGRAM_VERSION + '"')
+    compiler_flags.append ('-DPROGRAM_VERSION="' + str(PROGRAM_VERSION,'ascii') + '"')
 
     if opt.debug:
         conf.env.append_value('CFLAGS', debug_flags)

@@ -401,8 +401,8 @@ def build(bld):
     VERSION = "%s.%s" % (bld.env['MAJOR'], bld.env['MINOR'])
 
     if bld.env['build_target'] == 'mingw' and Options.options.program_name == 'Tracks Live':
-		bld(rule="windres ${SRC} -O coff -o ${TGT}", source='trackslive.rc.in', target='trackslive_resource.o')
-		gtk2_ardour_sources.append('trackslive_resource.o')
+        bld(rule="windres ${SRC} -O coff -o ${TGT}", source='trackslive.rc.in', target='trackslive_resource.o')
+        gtk2_ardour_sources.append('trackslive_resource.o')
 
     if bld.is_defined('WINDOWS_VST_SUPPORT') and bld.env['build_target'] != 'mingw':
         # Windows VST support w/wine
